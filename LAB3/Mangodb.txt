@@ -1,0 +1,17 @@
+use student
+db.student.insert({Roll: 10, Name: "suma", age: 21, contact: "7723112389", email: "suma@gmail.com"})
+db.student.insert({Roll: 11, Name: "ABC", age: 20, contact: "9263532389", email: "abc@gmail.com"})
+db.student.insert({Roll: 12, Name: "shek", age: 21, contact: "7788996655", email: "shek@gmail.com"})
+db.student.insert({Roll: 13, Name: "raj", age: 20, contact: "1234123412", email: "raj@gmail.com"})
+
+db.student.update({Roll:10}, {$set: {email: "suma123@gmail.com"}})
+db.student.update({Roll:11}, {$set: {Name: "FEM"}})
+
+show collections
+db.student.find()
+
+mongoexport --db testdb --collection student --out C:\Users\SUMALATA\OneDrive\Desktop\output.json
+
+Drop student
+
+mongoimport --db testdb --collection Student C:\Users\SUMALATA\OneDrive\Desktop\output.json
